@@ -1,7 +1,7 @@
 import React from "react";
 import { InputGroup, FormControl } from "react-bootstrap";
 
-const ChangeAmount = ({ onUpdateAmount }) => {
+const ChangeAmount = ({ onUpdateAmount, onGetPictures, amount }) => {
   return (
     <div>
       <p className="mt-5">Default is 50 pictures</p>
@@ -18,10 +18,7 @@ const ChangeAmount = ({ onUpdateAmount }) => {
           aria-describedby="inputGroup-sizing-default"
         />
       </InputGroup>
-      <div
-        id="button"
-        onClick={() => this.props.onGetPictures(this.props.amount)}
-      >
+      <div id="button" onClick={() => onGetPictures(amount)}>
         Get Pictures
       </div>
     </div>

@@ -9,7 +9,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case "UPDATE_AMOUNT":
-      console.log("UPDATE_AMOUNT");
+      console.log(`UPDATE_AMOUNT: ${action.amount}`);
       return {
         ...state,
         amount: action.amount
@@ -22,6 +22,7 @@ const reducer = (state = initialState, action) => {
         status: "REQUEST_FOR_PICTURES",
         pictures: action.pictures
       };
+
     case "REQUEST_COMPLETE":
       console.log(`  REQUEST_COMPLETE`);
       return {

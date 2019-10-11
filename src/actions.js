@@ -11,10 +11,16 @@ export const setStatusToReq = () => ({
   type: "SET_STATUS_TO_REQUEST"
 });
 
-export const updateAmount = amount => ({
-  type: "UPDATE_AMOUNT",
-  amount
-});
+export const updateAmount = amount => {
+  if (Number(amount) === 0) {
+    amount = 50;
+  }
+
+  return {
+    type: "UPDATE_AMOUNT",
+    amount
+  };
+};
 
 export const getPictures = value => {
   console.log("GET PICTURES");
